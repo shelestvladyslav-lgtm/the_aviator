@@ -1,0 +1,22 @@
+SUNSET FLIGHT — Shelest Vladyslav, 1CIEL
+
+Décompresser tout le ZIP. Ouvrir dossier_eleve/part6.html.
+Ou, dans dossier_eleve : python -m http.server 8000
+Puis ouvrir http://localhost:8000/part6.html
+
+Commandes : souris uniquement pour déplacer l’avion. Espace : bouclier (5 secondes, un chargeur initial, +1 charge par niveau, maximum 3 charges). P / Échap : pause. Entrée ou clic : rejouer après la chute.
+Score = distance + 25 points par cristal. Les cristaux restaurent aussi l'énergie. Le record est conservé dans ce navigateur si le stockage local est autorisé.
+
+Modifications : ambiance coucher de soleil, interface française, ennemis drones, bouclier visible, score, record local, pause, pilotage à la souris. Temps entre images limité pour éviter les grands sauts après un changement d'onglet. Nettoyage des objets au redémarrage.
+
+Fichiers ajoutés : part6.html, css/sunset.css, js/game_sunset.js, LIRE_MOI.txt.
+Les versions initiales sont conservées. Projet original : The Aviator, Karim Maaloul / Codrops. Three.js et TweenMax sont conservés localement ; pas de téléchargement nécessaire pour la version personnalisée.
+
+Correction : navigation en bas sans superposition, suppression du CSS de démonstration dans part6, suppression du déplacement clavier et de la pause automatique au changement de fenêtre.
+
+Boucliers : chaque niveau obtenu ajoute une charge (limite 3). Chaque activation consomme une charge et protège 5 secondes. Une protection déjà active ne consomme pas de nouvelle charge.
+
+Accueil : index.html conserve le jeu original avec le nouvel habillage et un bouton vers part6.html.
+Part6 : à chaque nouveau niveau, 35 % de chances de basculer entre coucher de soleil et nuit. Le vol commence toujours au coucher du soleil.
+
+Accueil sans compteur, bouton agrandi. Part6 : collision sans bouclier = explosion et fin immédiate. Écran de statistiques assombri, bouton Retour à l’accueil.
